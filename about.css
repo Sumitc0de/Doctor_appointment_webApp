@@ -1,0 +1,65 @@
+h2{
+    margin-top: 50px;
+    text-align: center;
+    color: rgba(128, 128, 128, 0.644);
+}
+h2 span{
+    color: rgba(0, 0, 0, 0.623);
+}
+.about-page{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-top: 20px;
+}
+.img-part{
+
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+}
+.img-part img{
+    width: 23vw;
+}
+.content-part{
+    width: 50%;
+}
+.content-part p{
+    font-size: 15px;
+    color: rgb(124, 124, 124);
+}
+.our-goal{
+    margin-top: 50px;
+}
+.our-goal h1{
+    font-size: 1.2rem;
+    color: #272727db;
+}
+.goal-task{
+    display:flex;
+align-items: center;
+justify-content: center;
+margin-top: 20px;
+}
+.goal{
+    width: 30vw;
+    height: 200px;
+    border: 0.6px solid rgba(208, 208, 208, 0.365);
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 45px;
+    transition: all ease-in 0.25s;
+}
+.goal:hover{
+    background-color: #6B7AFF;
+}
+.goal span p{
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.84);
+}
+.goal p{
+    color: rgba(65, 65, 65, 0.826);
+}

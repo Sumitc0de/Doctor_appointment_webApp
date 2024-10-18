@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Specialties Filter</title>
+</head>
+<body>
+    <h1>Doctor Specialties</h1>
+    
+    <!-- Buttons to filter doctor specialties -->
+    <button onclick="filterDoctors('General Physician')">General Physicians</button>
+    <button onclick="filterDoctors('Dermatologist')">Dermatologists</button>
+    <button onclick="filterDoctors('Neurologist')">Neurologists</button>
+    <button onclick="filterDoctors('Gynecologist')">Gynecologists</button>
+    <button onclick="filterDoctors('Gastroenterologist')">Gastroenterologists</button>
+    <button onclick="filterDoctors('Pediatrician')">Pediatricians</button>
+    
+    <!-- Container for displaying filtered doctor specialties -->
+    <div id="doctor-list"></div>
+
+    <script>
+        // Array of doctors with their specialties
+        const doctors = [
+            { name: "Dr. Smith", specialty: "General Physician" },
+            { name: "Dr. Johnson", specialty: "Dermatologist" },
+            { name: "Dr. Williams", specialty: "Neurologist" },
+            { name: "Dr. Brown", specialty: "Gynecologist" },
+            { name: "Dr. Jones", specialty: "Gastroenterologist" },
+            { name: "Dr. Garcia", specialty: "Pediatrician" },
+            { name: "Dr. Miller", specialty: "General Physician" },
+            { name: "Dr. Davis", specialty: "Dermatologist" }
+        ];
+
+        // Function to filter doctors based on specialty
+        function filterDoctors(specialty) {
+            // Filter the array of doctors by the selected specialty
+            const filteredDoctors = doctors.filter(doctor => doctor.specialty === specialty);
+            
+            // Get the container to display the filtered doctors
+            const doctorList = document.getElementById("doctor-list");
+            
+            // Clear previous content
+            doctorList.innerHTML = '';
+
+            // Display the filtered doctors
+            filteredDoctors.forEach(doctor => {
+                const doctorItem = document.createElement('p');
+                doctorItem.textContent = `${doctor.name} - ${doctor.specialty}`;
+                doctorList.appendChild(doctorItem);
+            });
+
+            // Show a message if no doctors are found for the selected specialty
+            if (filteredDoctors.length === 0) {
+                doctorList.textContent = `No doctors found for the specialty: ${specialty}`;
+            }
+        }
+    </script>
+</body>
+</html>
